@@ -54,6 +54,27 @@ angular
           helper: 'clone'
         }
 
+        # Hist methods
+        # -------------------------
+        $scope.hist = {
+          date:
+            from: new Date(new Date().getFullYear(), 0, 1)
+            to: new Date()
+          opened:
+            from: false
+            to: false
+          format: "yyyy-MM-dd"
+        }
+
+        $scope.openDateFrom = () ->
+          $scope.hist.opened.from = true
+
+        $scope.openDateTo = () ->
+          $scope.hist.opened.to = true
+
+        $scope.massDateAssignment = () ->
+          console.log "Date changed"
+
         # Linked methods
         # -------------------------
         $scope.addKpi = (kpi) ->

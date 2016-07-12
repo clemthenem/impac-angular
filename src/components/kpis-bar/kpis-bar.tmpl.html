@@ -54,4 +54,13 @@
       </div>
     </div>
   </div>
+  
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 hist-kpi">
+      <span>From</span>
+      <button datepicker-popup="{{hist.format}}" ng-model="hist.date.from" is-open="hist.opened.from" ng-click="openDateFrom()" ng-change="massDateAssignment()">{{hist.date.from | date : hist.format}}</button>
+      <span>To</span>
+      <button datepicker-popup="{{hist.format}}" ng-model="hist.date.to" is-open="hist.opened.to" ng-click="openDateTo()" ng-change="massDateAssignment()">{{hist.date.to | date : hist.format}}</button>
+    </div>
+  </div>
 </div>
